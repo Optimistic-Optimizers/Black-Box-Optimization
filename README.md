@@ -6,11 +6,11 @@ From the Optuna package, the following optimizers were tested:
     This optimizer randomly selects parameter values to sample from the objective function, and returns the values that
     have the highest output of the function. 
     
-    - Advantages:
+    Advantages:
 	- Good for functions with few parameters
 	- Good when sampling is cheap 
 	- Fast   
-    - Disadvantages:
+    Disadvantages:
 	- Inefficient when the function has many parameters
 	- Inefficient when sampling is expensive
 	- Inefficent on multi-modal or noisy functions 
@@ -25,6 +25,7 @@ From the Optuna package, the following optimizers were tested:
     Advantages:
 	- Accurate
 	- Fast 
+    
     Disadvantages:
 	- Does not model the interactions between parameters   
     
