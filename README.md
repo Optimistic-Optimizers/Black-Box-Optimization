@@ -10,6 +10,7 @@ From the Optuna package, the following optimizers were tested:
 	- Good for functions with few parameters
 	- Good when sampling is cheap 
 	- Fast   
+    
     Disadvantages:
 	- Inefficient when the function has many parameters
 	- Inefficient when sampling is expensive
