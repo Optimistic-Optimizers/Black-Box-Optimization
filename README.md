@@ -11,7 +11,7 @@ We chose to do this project because we appreciate the essentiality of the applic
 
 ## Description of Optimizers used:
 
-From the Optuna package, the following optimizers were tested:
+**From the Optuna package, the following optimizers were tested:**
 
 1. **Random Optimizer**: 
     This optimizer randomly selects parameter values to sample from the objective function, and returns the values that
@@ -78,3 +78,20 @@ From the Optuna package, the following optimizers were tested:
     *Disadvantages:*
 	- Results are sensitive to parameters of the surrogate model
 	- Needs to sample the function many times
+
+
+
+## Software Dependencies:
+
+The following software dependencies are associated with this package:
+	- Python 3.7
+	- Please see the file environmental.yml for the needed packages **(Note to group: Need to create the environmental.yml??)**
+
+
+## How to Install:
+
+
+## Organization of the Project:
+
+
+## Running Tests:
