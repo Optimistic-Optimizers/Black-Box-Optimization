@@ -1,5 +1,16 @@
 # Black-Box-Optimization
 
+Black-BoxO-ptimization is a Data Science Project that was developed as a part of the DIRECT Program by a group of graduate students from the University of Washington in Seattle.
+
+The goal of BlackBoxOptimization is to explore and test a variety of optimizing tools with many different objective functions to provide a guide for users to identify the best optimizing tool for their specific optimization needs. Optimization is an important tool in making decisions and in analyzing physical systems. In mathematical terms, an optimization problem is the problem of finding the best solution (i.e., maxima or minima) from among the set of all feasible solutions. 
+
+We chose to do this project because we appreciate the essentiality of the application and the importance of making it a less expensive and timely process. 
+
+
+
+
+## Description of Optimizers used:
+
 From the Optuna package, the following optimizers were tested:
 
 1. Random Optimizer 
