@@ -46,3 +46,24 @@ From the Optuna package, the following optimizers were tested:
     Disadvantages:
 	- Inefficient on functions with low dimensions 
 	- Needs to sample the function many times     
+
+
+Additional optimizers tested:
+
+4. Bayes_Opt
+   Bayesian optimization works by constructing a posterior distribution of functions (Gaussian process) that best describes the 
+   function to be optimized. When the number of observations increases, the posterior distribution improves, and the algorithm 
+   becomes more confident of which regions in parameter space to explore and which regions to ignore.
+   
+   The algorithm balances its needs of exploration and exploitation taking into account what it 
+   knows about the target function as the number of iterations increases. At each step a Gaussian Process is fitted to the 
+   previously explored points, and the posterior distribution, combined with a exploration strategy (such Upper Confidence Bound 
+   or Expected Improvement), are used to determine the next point that should be explored.
+   
+    Advantages:
+	- Very accurate and fast 
+	- Works well on expensive functions
+    
+    Disadvantages:
+	- Results are sensitive to parameters of the surrogate model
+	- Needs to sample the function many times
