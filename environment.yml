@@ -1,0 +1,5 @@
+name: Black-Box-Optimization
+channels:
+  - conda-forge
+  - defaults
+prefix: /Users/beth_harmon/opt/anaconda3/envs/Black-Box-Optimization
