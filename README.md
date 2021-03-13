@@ -79,8 +79,57 @@ We chose to do this project because we appreciate the essentiality of the applic
 	- Results are sensitive to parameters of the surrogate model
 	- Needs to sample the function many times
 
+**From the Pulp package, the following optimizer is tested:**
 
+5.	**Coin-or branch and cut (CBC)**:
+    Given a MIP model to minimize where some variables must take on integer values (e.g., 0, 1, or 2), relax the integrality requirements
+	(e.g., consider each "integer" variable to be continuous with a lower bound of 0.0 and an upper bound of 2.0). Then Solves the resulting 
+	linear model with an LP solver to obtain a lower bound on the MIP's objective function value. If the optimal LP solution has integer values 
+	for the MIP's integer variables, we are finished. Any MIP-feasible solution provides an upper bound on the objective value. 
+	The upper bound equals the lower bound; the solution is optimal. Otherwise, there exists an "integer" variable with a non-integral value. 
+	Choose one non-integral variable (e.g., with value 1.3) and branch. Creates two nodes, one with the branching variable having an upper bound of 1.0, 
+	and the other with the branching variable having a lower bound of 2.0. Add the two nodes to the search tree. Picks a node off the tree. 
+	Creates an LP relaxation and solve. Interrogate the optimal LP solution and if unable to prune the node, then branch.
 
+    *Advantages:*
+	- On easier instances it is fast
+ 	- On easier instances it performs well
+    
+    *Disadvantages:*
+	- On harder instances it works very slow
+    - On harder instances it's not accurate 
+
+**From the Hyperopt package, the following optimizers were tested:**
+
+6. **Random Search**: 
+    This method works where random combinations of the values of the hyperparameters are used to find the best solution for the built model. 
+	Random search samples random parameters combinations from a statistical distribution provided by the user.
+	This approach is based on the assumption that in most cases, hyperparameters are not uniformly important. 
+	The search strategy starts evaluating all the candidates with a small amount of resources and iteratively selects the best candidates, using more and more resources. 
+    
+    *Advantages:*
+	- Random Search is Fast
+	- Adding parameters that do not influence the performance does not decrease efficiency.
+    
+    *Disadvantages:*
+	- Random Search sometimes could miss important points(values) in the search space.
+
+7. **Tree of Parzen Estimators (TPE):**
+    This optimizer finds the probability that a sample is higher than a certain threshold, g(x) and another probability that a
+    sample is less than this same threshold, l(x). Both of these probabilities are expressed as a distribution. l(x)/g(x) gives
+    the expected improvement. The optimizer samples from l(x), evaluates the expected improvement l(x)/g(x) and then tests this
+    sample in the objective function. It is expected that the sample would improve after every iteration and eventually reach
+    the optimum value of the function. 
+
+    *Advantages:*
+    - Executes in consistent, predictable amount of time that will never change
+ 	- Fast to execute
+	- Better normalized between different hyper-parameter spaces
+    
+    *Disadvantages:*
+	- Not focused on the globally optimal result - forces the algorithm to take the shortest path into a local minima
+    - In Mean loss after K-trials, if you set K too high, algorithm may find near optimal values regardless of what changes you make to it  
+    
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
