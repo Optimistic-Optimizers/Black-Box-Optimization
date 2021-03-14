@@ -129,6 +129,28 @@ We chose to do this project because we appreciate the essentiality of the applic
     *Disadvantages:*
 	- Not focused on the globally optimal result - forces the algorithm to take the shortest path into a local minima
     - In Mean loss after K-trials, if you set K too high, algorithm may find near optimal values regardless of what changes you make to it  
+
+**From the Skopt package, the following optimizer was tested:**
+
+8. **Bayesian Optimization:**
+   Bayesian optimization works by constructing a posterior distribution of functions (Gaussian process) that best describes the 
+   function to be optimized. When the number of observations increases, the posterior distribution improves, and the algorithm 
+   becomes more confident of which regions in parameter space to explore and which regions to ignore.
+   
+   The algorithm balances its needs of exploration and exploitation taking into account what it 
+   knows about the target function as the number of iterations increases. At each step a Gaussian Process is fitted to the 
+   previously explored points, and the posterior distribution, combined with a exploration strategy (such Upper Confidence Bound 
+   or Expected Improvement), are used to determine the next point that should be explored.
+   
+    *Advantages:*
+    - Very accurate and fast 
+    - Works well on expensive functions
+    - Works well on noisy functions
+    
+    *Disadvantages:*
+    - Results are sensitive to parameters of the surrogate model
+    - Needs to sample the function many times
+    - Scale poorly with number of hyperparameters
     
 ## Software Dependencies:
 
