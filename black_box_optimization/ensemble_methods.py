@@ -11,11 +11,19 @@ def decision_tree_classifier(a,b,c,d):
     from sklearn import tree
     from sklearn.tree import DecisionTreeClassifier
     
+
     df = pd.read_excel('data/All Data combined.xlsx')
+    
     df = df.drop(['Unnamed: 0'], axis=1)
+    df = df.drop(['Unnamed: 8'], axis=1)
     df = df.drop(['type_of_opt'], axis=1)
+    df.dropna()
+    
+    df = df[df['accuracy [calc. max/ actual max]'] < 1.05]  
+    
     x = df[['number of trials','number of parameters','accuracy [calc. max/ actual max]', 'time per trial [s]']].values
     y = df['assigned_class']
+    
     x_train, x_test, y_train, y_test = train_test_split(x, y,test_size=0.30)
     x_train = StandardScaler().fit(x_train).transform(x_train)
     x_test = StandardScaler().fit(x_test).transform(x_test)
@@ -30,6 +38,7 @@ def decision_tree_classifier(a,b,c,d):
         yhat = clf.predict(x_test)
         MSE = mean_squared_error(y_test, yhat)
         acc = accuracy_score(y_test, yhat)
+
         return  acc
 
     xmin = 1
@@ -50,13 +59,25 @@ def decision_tree_classifier(a,b,c,d):
 
     max_value = func(found_x, found_y)
 
+    print("Found x: {}, f: {}".format(found_x, (func(found_x, found_y))))
+    print("Found y: {}, f: {}".format(found_y, (func(found_x, found_y))))
+    print("Max value found is: {}".format(max_value))
+
     estimator = DecisionTreeClassifier(max_depth=int(np.round(found_x)))
     clf = BaggingClassifier(base_estimator=estimator, n_estimators= int(np.round(found_y)))
     clf = clf.fit(x_train, y_train)
     yhat = clf.predict(x_test)
     acc = accuracy_score(y_test, yhat)
     x = np.array([a,b,c,d]).reshape(1,-1)
-    predicted_class = clf.predict(x)
-    
-    return predicted_class
+    predicted_category_num = int(clf.predict(x)[0])
+    if predicted_category_num == 0:
+        predicted_category = 'CmaEs'
+    elif predicted_category_num == 1:
+        predicted_category = 'Random'
+    elif predicted_category_num == 2:
+        predicted_category = 'TPE'
+    elif predicted_category_num == 3:
+        predicted_category = 'Bayes'
+  
+    return predicted_category 
     
