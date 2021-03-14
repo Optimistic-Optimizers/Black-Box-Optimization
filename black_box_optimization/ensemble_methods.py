@@ -2,7 +2,8 @@ def decision_tree_classifier(a,b,c,d):
     import numpy as np
     import pandas as pd
     from bayes_opt import BayesianOptimization
-    import sklearn 
+    import sklearn
+    import os 
     from sklearn.model_selection import train_test_split
     from sklearn.preprocessing import StandardScaler
     from sklearn.preprocessing import MinMaxScaler
@@ -11,9 +12,12 @@ def decision_tree_classifier(a,b,c,d):
     from sklearn import tree
     from sklearn.tree import DecisionTreeClassifier
     
-
-    df = pd.read_excel('data/All Data combined.xlsx')
+    if os.path.exists('data/All Data combined.xlsx'):
+        df = pd.read_excel('data/All Data combined.xlsx')
+    else:
+        df = pd.read_excel('../data/All Data combined.xlsx')
     
+        
     df = df.drop(['Unnamed: 0'], axis=1)
     df = df.drop(['Unnamed: 8'], axis=1)
     df = df.drop(['type_of_opt'], axis=1)
