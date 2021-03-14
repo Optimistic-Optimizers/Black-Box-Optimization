@@ -1,8 +1,14 @@
-jobs:
-  include:
-    - stage: test
-      script: ./test 1
+#jobs:
+#  include:
+#    - stage: test
+#      script: ./test 1
     - # stage name not required, will continue to use `test`
-      script: ./test 2
-    - stage: deploy
-      script: ./deploy
+#      script: ./test 2
+#    - stage: deploy
+#      script: ./deploy
+
+language: python
+python:
+  - "3.8.5"
+script:
+  - python test.py
