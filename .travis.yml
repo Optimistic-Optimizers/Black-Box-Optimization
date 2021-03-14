@@ -35,7 +35,7 @@ install:
 
 # a list of commands to run before the main script
 before_script:
-    - flake8 lmpm
+    - flake8 black_box_optimization
 
 # the actual commands to run
 script:
