@@ -151,7 +151,10 @@ We chose to do this project because we appreciate the essentiality of the applic
     - Results are sensitive to parameters of the surrogate model
     - Needs to sample the function many times
     - Scale poorly with number of hyperparameters
-    
+
+## Results:
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results.jpg?raw=true)    
+
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
