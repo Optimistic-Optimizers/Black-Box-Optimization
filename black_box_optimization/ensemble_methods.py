@@ -82,7 +82,8 @@ def decision_tree_classifier(a,b,c,d):
         predicted_category = 'TPE'
     elif predicted_category_num == 3:
         predicted_category = 'Bayes'
-  
+    elif predicted_category_num == 5:
+        predicted_category = 'PULP_CBC_CMD'
     return predicted_category
 
 def random_forest_classifier(a,b,c,d):
@@ -167,6 +168,8 @@ def random_forest_classifier(a,b,c,d):
         predicted_category = 'TPE'
     elif predicted_category_num == 3:
         predicted_category = 'Bayes'
+    elif predicted_category_num == 5:
+        predicted_category = 'PULP_CBC_CMD'
   
     return predicted_category
-    
+
