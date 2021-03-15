@@ -178,34 +178,34 @@ The following software dependencies are associated with this package:
 ## Organization:
 
 Black-Box-Optimization:
-    |- black_box_optimization
-        |- data
-            |- All Data combined.xlsx
-            |- Data_Bayes_clean.xlsx
-            |- Data_Bayes_trig.xlsx
-            |- Data_Optuna_1.xlsx
-            |- Hyperopt.csv
-            |- Pulp.csv
+        |- black_box_optimization
+            |- data
+                |- All Data combined.xlsx
+                |- Data_Bayes_clean.xlsx
+                |- Data_Bayes_trig.xlsx
+                |- Data_Optuna_1.xlsx
+                |- Hyperopt.csv
+                |- Pulp.csv
+                |- __init__.py
+                |- number_of_parameters_2.xlsx
+                |- skopt_data_main.csv
+            |- data_generators
+                |- Bayes_Opt.ipynb
+                |- Hyperopt.ipynb
+                |- Optuna optimization.ipynb
+                |- Pulp Optimizer.ipynb
+                |- Skopt_scikit-optimize.ipynb
+                |- __init__.py
+            |- tests
+            |- Ensemble_Methods.ipynb
+            |- Machine_Learning.ipnyb
             |- __init__.py
-            |- number_of_parameters_2.xlsx
-            |- skopt_data_main.csv
-        |- data_generators
-            |- Bayes_Opt.ipynb
-            |- Hyperopt.ipynb
-            |- Optuna optimization.ipynb
-            |- Pulp Optimizer.ipynb
-            |- Skopt_scikit-optimize.ipynb
-            |- __init__.py
-        |- tests
-        |- Ensemble_Methods.ipynb
-        |- Machine_Learning.ipnyb
-        |- __init__.py
-        |- ensemble_methods.py
-    |- .gitignore
-    |- .travis.yml
-    |- LICENSE
-    |- README.md
-    |- environment.yml
+            |- ensemble_methods.py
+        |- .gitignore
+        |- .travis.yml
+        |- LICENSE
+        |- README.md
+        |- environment.yml
 
 
 ## Running Tests:
