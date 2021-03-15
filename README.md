@@ -123,11 +123,11 @@ We chose to do this project because we appreciate the essentiality of the applic
     - Scale poorly with number of hyperparameters
 
 ## Results:
-![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results.jpg?raw=true)    
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/docs/blob/main/optimization_results.jpg?raw=true)    
 **Figure 1.** The figure shows how the machine learning model categorized each optimizer based on the three parameters:
 Number of trials, Accuracy, Time of Iteration. The figure shows the results for a 2 dimensional objective function.
 
-Several conclusions could be drawn from figure 1. The fastest optimizer is the Random one which was not so consistent 
+Several conclusions could be drawn from figure 1. The fastest optimizer is the Random one which was inconsistent 
 in terms of accuracy. This makes sense because the performance completely depends on generating random numbers, which 
 means inconsistent results, but fast calculations. There also seems to be a boundary at around 0.2 Time per Iteration 
 where above this level, the TPE and Bayesian optimizers are mostly categorized. This can be explained becuase the time
@@ -140,7 +140,7 @@ could not be concluded which optimizer performed better at fewer trials. The Pul
 well as the Bayesian one, but required more time to run. 
 
     
-![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results_4.jpg?raw=true)
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/docs/blob/main/optimization_results_4.jpg?raw=true)
 **Figure 2.** The figure shows how the machine learning model categorized each optimizer based on the three parameters.
 The figure shows the results for a 4 dimensional objective function.
 
@@ -151,6 +151,7 @@ it not been for time constraints. There is not much of a change between both of 
 optimizer being categorized over the Bayesian one at low accuracies and low time per iteration.
 
 The main conclusion are:
+
 **Bayesian Optimization:** This optimizer is accurate with a moderate to high number of trials. The drawback is that it
 takes a long time to run. 
 
