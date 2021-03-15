@@ -98,41 +98,11 @@ We chose to do this project because we appreciate the essentiality of the applic
     *Disadvantages:*
 	- On harder instances it works very slow
     - On harder instances it's not accurate 
-
-**From the Hyperopt package, the following optimizers were tested:**
-
-6. **Random Search**: 
-    This method works where random combinations of the values of the hyperparameters are used to find the best solution for the built model. 
-	Random search samples random parameters combinations from a statistical distribution provided by the user.
-	This approach is based on the assumption that in most cases, hyperparameters are not uniformly important. 
-	The search strategy starts evaluating all the candidates with a small amount of resources and iteratively selects the best candidates, using more and more resources. 
+ 
     
-    *Advantages:*
-	- Random Search is Fast
-	- Adding parameters that do not influence the performance does not decrease efficiency.
-    
-    *Disadvantages:*
-	- Random Search sometimes could miss important points(values) in the search space.
-
-7. **Tree of Parzen Estimators (TPE):**
-    This optimizer finds the probability that a sample is higher than a certain threshold, g(x) and another probability that a
-    sample is less than this same threshold, l(x). Both of these probabilities are expressed as a distribution. l(x)/g(x) gives
-    the expected improvement. The optimizer samples from l(x), evaluates the expected improvement l(x)/g(x) and then tests this
-    sample in the objective function. It is expected that the sample would improve after every iteration and eventually reach
-    the optimum value of the function. 
-
-    *Advantages:*
-    - Executes in consistent, predictable amount of time that will never change
- 	- Fast to execute
-	- Better normalized between different hyper-parameter spaces
-    
-    *Disadvantages:*
-	- Not focused on the globally optimal result - forces the algorithm to take the shortest path into a local minima
-    - In Mean loss after K-trials, if you set K too high, algorithm may find near optimal values regardless of what changes you make to it  
-
 **From the Skopt package, the following optimizer was tested:**
 
-8. **Bayesian Optimization:**
+6. **Bayesian Optimization:**
    Bayesian optimization works by constructing a posterior distribution of functions (Gaussian process) that best describes the 
    function to be optimized. When the number of observations increases, the posterior distribution improves, and the algorithm 
    becomes more confident of which regions in parameter space to explore and which regions to ignore.
@@ -157,9 +127,43 @@ We chose to do this project because we appreciate the essentiality of the applic
 **Figure 1.** The figure shows how the machine learning model categorized each optimizer based on the three parameters:
 Number of trials, Accuracy, Time of Iteration. The figure shows the results for a 2 dimensional objective function.
 
+Several conclusions could be drawn from figure 1. The fastest optimizer is the Random one which was not so consistent 
+in terms of accuracy. This makes sense because the performance completely depends on generating random numbers, which 
+means inconsistent results, but fast calculations. There also seems to be a boundary at around 0.2 Time per Iteration 
+where above this level, the TPE and Bayesian optimizers are mostly categorized. This can be explained becuase the time
+per Iteration data was negatively skewed which means that the Bayesian and TPE optimizers took significantly longer 
+time than the other optimizers. Because of this, any time above 0.2 will most likely be classified as one of those 
+optimizers regardless of the other parameters. 
+
+At under 0.2 Time per Iteration, the Bayesian performed consistently better when it could execute more trials. It
+could not be concluded which optimizer performed better at fewer trials. The Pulp optimizer also seems to perform as
+well as the Bayesian one, but required more time to run. 
+
+    
 ![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results_4.jpg?raw=true)
 **Figure 2.** The figure shows how the machine learning model categorized each optimizer based on the three parameters.
-The figure shows the results for a 4 dimensional objective function.  
+The figure shows the results for a 4 dimensional objective function.
+
+The difference between the two figures is that figure 2 had an objective function with 4 dimensions. The purpose was
+to explore how each optimizer performed on higher dimensional functions which significantly increase the computational
+cost. While only 2 and 4 dimensional functions were explored, it would have been useful to test higher dimensions had
+it not been for time constraints. There is not much of a change between both of the figures, other than the CmaEs 
+optimizer being categorized over the Bayesian one at low accuracies and low time per iteration.
+
+The main conclusion are:
+**Bayesian Optimization:** This optimizer is accurate with a moderate to high number of trials. The drawback is that it
+takes a long time to run. 
+
+**Pulp CBC:** This optimizer is accurate with a high number of trials. It also takes a long time to run. 
+
+**Random:** This optimizer is very fast but the accuracy is highy inconsistent. It was expected to perform well in
+functions with low dimensions, but worse in high ones.  
+
+**TPE:** Inconclusive data
+
+**CmaEs:** This optimizer was fast, but inaccurate. It was expected to perform better with a large number of trials
+and with functions with high dimensions. 
+  
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
