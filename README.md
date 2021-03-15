@@ -123,7 +123,7 @@ We chose to do this project because we appreciate the essentiality of the applic
     - Scale poorly with number of hyperparameters
 
 ## Results:
-![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/tree/main/docs/optimization_results.jpg?raw=true)    
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/docs/optimization_results.jpg?raw=true)    
 **Figure 1.** The figure shows how the machine learning model categorized each optimizer based on the three parameters:
 Number of trials, Accuracy, Time of Iteration. The figure shows the results for a 2 dimensional objective function.
 
@@ -140,7 +140,7 @@ could not be concluded which optimizer performed better at fewer trials. The Pul
 well as the Bayesian one, but required more time to run. 
 
     
-![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/docs/blob/main/optimization_results_4.jpg?raw=true)
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/docs/optimization_results_4.jpg?raw=true)
 **Figure 2.** The figure shows how the machine learning model categorized each optimizer based on the three parameters.
 The figure shows the results for a 4 dimensional objective function.
 
