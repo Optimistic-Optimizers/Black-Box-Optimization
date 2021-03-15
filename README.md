@@ -154,12 +154,12 @@ We chose to do this project because we appreciate the essentiality of the applic
 
 ## Results:
 ![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results.jpg?raw=true)    
-*Figure 1.* The figure shows how the machine learning model categorized each optimizer based on the three parameters:
+**Figure 1.** The figure shows how the machine learning model categorized each optimizer based on the three parameters:
 Number of trials, Accuracy, Time of Iteration. The figure shows the results for a 2 dimensional objective function.
 
 ![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/optimization_results_4.jpg?raw=true)
-*Figure 2* The figure shows how the machine learning model categorized each optimizer based on the three parameters.
-The figure shows the results for a 4 dimentional objective function.  
+**Figure 2.** The figure shows how the machine learning model categorized each optimizer based on the three parameters.
+The figure shows the results for a 4 dimensional objective function.  
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
