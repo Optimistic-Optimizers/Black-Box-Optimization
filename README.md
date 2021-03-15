@@ -178,6 +178,7 @@ The following software dependencies are associated with this package:
 ## Organization:
 
 Black-Box-Optimization:
+        
         |- black_box_optimization
             |- data
                 |- All Data combined.xlsx
