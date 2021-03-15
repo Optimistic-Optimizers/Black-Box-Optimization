@@ -123,7 +123,7 @@ We chose to do this project because we appreciate the essentiality of the applic
     - Scale poorly with number of hyperparameters
 
 ## Results:
-![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/docs/blob/main/optimization_results.jpg?raw=true)    
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/tree/main/docs/optimization_results.jpg?raw=true)    
 **Figure 1.** The figure shows how the machine learning model categorized each optimizer based on the three parameters:
 Number of trials, Accuracy, Time of Iteration. The figure shows the results for a 2 dimensional objective function.
 
