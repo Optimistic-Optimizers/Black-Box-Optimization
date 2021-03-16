@@ -199,8 +199,8 @@ Black-Box-Optimization:
                 |- __init__.py
             |- tests
             |- Ensemble_Methods.ipynb
-            |- KNN_methods
-	     |- SVM_methods	    
+            |- KNN_methods.ipynb
+	    |- SVM_methods.ipynb	    
             |- __init__.py
             |- ensemble_methods.py
         |- docs
