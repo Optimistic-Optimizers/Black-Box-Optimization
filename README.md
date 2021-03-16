@@ -189,13 +189,13 @@ Black-Box-Optimization:
                 |- Pulp.csv
                 |- __init__.py
                 |- number_of_parameters_2.xlsx
-                |- skopt_data_main.csv
+                |- skopt_data.csv
             |- data_generators
                 |- Bayes_Opt.ipynb
                 |- Hyperopt.ipynb
                 |- Optuna optimization.ipynb
                 |- Pulp Optimizer.ipynb
-                |- Skopt_scikit-optimize.ipynb
+                |- Skopt_optimize.ipynb
                 |- __init__.py
             |- tests
             |- Ensemble_Methods.ipynb
