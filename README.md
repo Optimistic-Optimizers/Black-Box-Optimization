@@ -176,16 +176,19 @@ The following software dependencies are associated with this package:
 ## How to Install and Use:
 
 1. Enter into your desired directory from your computer's terminal
+
 2. Enter the command `git clone https://github.com/Optimistic-Optimizers/Black-Box-Optimization.git`
+
 3. Enter the following commands into your Jupyter Notebook:
 ![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/docs/CallingTheFunction.png)
 
-4. The order of the inputs for the function are: 
+4. The order of the inputs for the `decision_tree_classifer` function are:
     - Number of Trials
     - Number of Parameters
     - Accuracy
     - Time per Iteration
-
+    
+5. When making your selection for each input, use a value between 0-1 where 0 corresponds to the lowest possible value for that input and 1 corresponds to the maximum possible value for that input.
 
 ## Organization:
 
