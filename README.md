@@ -202,6 +202,12 @@ Black-Box-Optimization:
             |- Machine_Learning.ipnyb
             |- __init__.py
             |- ensemble_methods.py
+        |- docs
+            |- OptimisticOptimizers_Final_Presentation.pptx
+            |- TechReview.pptx
+            |- UseCases.md
+            |- optimization_results.jpg
+            |- optimization_results_4.jpg
         |- .gitignore
         |- .travis.yml
         |- LICENSE
