@@ -152,17 +152,17 @@ optimizer being categorized over the Bayesian one at low accuracies and low time
 
 The main conclusion are:
 
-**Bayesian Optimization:** This optimizer is accurate with a moderate to high number of trials. The drawback is that it
+-**Bayesian Optimization:** This optimizer is accurate with a moderate to high number of trials. The drawback is that it
 takes a long time to run. 
 
-**Pulp CBC:** This optimizer is accurate with a high number of trials. It also takes a long time to run. 
+-**Pulp CBC:** This optimizer is accurate with a high number of trials. It also takes a long time to run. 
 
-**Random:** This optimizer is very fast but the accuracy is highy inconsistent. It was expected to perform well in
+-**Random:** This optimizer is very fast but the accuracy is highy inconsistent. It was expected to perform well in
 functions with low dimensions, but worse in high ones.  
 
-**TPE:** Inconclusive data
+-**TPE:** Inconclusive data
 
-**CmaEs:** This optimizer was fast, but inaccurate. It was expected to perform better with a large number of trials
+-**CmaEs:** This optimizer was fast, but inaccurate. It was expected to perform better with a large number of trials
 and with functions with high dimensions. 
   
 ## Software Dependencies:
@@ -210,3 +210,22 @@ Black-Box-Optimization:
 
 
 ## Running Tests:
+
+### Nosetests:
+
+Tests can be run using the [**nosetests**](https://nose.readthedocs.io/en/latest/) package:
+
+nosetests Black-Box-Optimization/tests/test.py
+
+### Style Tests
+
+This project follows the PEP8 style using the [**pylint**](https://www.pylint.org/) code checker.
+
+
+## Authors:
+
+- Sara Aalinezhad, 
+- Huat Chiang, PhD Chemical Engineering
+- Ahmed Eshaq, 
+- Elizabeth Harmon, MS Chemical Engineering
+- Salek Segid, 
