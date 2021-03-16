@@ -200,7 +200,7 @@ Black-Box-Optimization:
             |- tests
             |- Ensemble_Methods.ipynb
             |- KNN_methods
-	    |- SVM_methods	    
+	     |- SVM_methods	    
             |- __init__.py
             |- ensemble_methods.py
         |- docs
