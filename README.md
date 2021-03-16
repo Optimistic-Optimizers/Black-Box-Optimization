@@ -224,8 +224,8 @@ This project follows the PEP8 style using the [**pylint**](https://www.pylint.or
 
 ## Authors:
 
-- Sara Aalinezhad, 
+- Sara Aalinezhad, DSMS Chemical Engineering
 - Huat Chiang, PhD Chemical Engineering
-- Ahmed Eshaq, 
+- Ahmed Eshaq, DSMS Chemical Engineering
 - Elizabeth Harmon, MS Chemical Engineering
 - Salek Segid, DSMS Chemical Engineering
