@@ -182,7 +182,7 @@ The following software dependencies are associated with this package:
 3. Enter the following commands into your Jupyter Notebook (this is an example of one of the available models):
 ![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/docs/CallingTheFunction.png)
 
-4. The order of the inputs for the `decision_tree_classifer` function are:
+4. The order of the inputs for the functions are:
     - Number of Trials
     - Number of Parameters
     - Accuracy
