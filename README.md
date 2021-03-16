@@ -173,7 +173,18 @@ The following software dependencies are associated with this package:
     - Please see the file environmental.yml for the needed packages 
 
 
-## How to Install:
+## How to Install and Use:
+
+1. Enter into your desired directory from your computer's terminal
+2. Enter the command `git clone https://github.com/Optimistic-Optimizers/Black-Box-Optimization.git`
+3. Enter the following commands into your Jupyter Notebook:
+![alt text](https://github.com/Optimistic-Optimizers/Black-Box-Optimization/blob/main/docs/CallingTheFunction.png)
+
+4. The order of the inputs for the function are: 
+    - Number of Trials
+    - Number of Parameters
+    - Accuracy
+    - Time per Iteration
 
 
 ## Organization:
