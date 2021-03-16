@@ -17,7 +17,7 @@ We chose to do this project because we appreciate the essentiality of the applic
     This optimizer randomly selects parameter values to sample from the objective function, and returns the values that
     have the highest output of the function. 
     
-    *Advantages:*
+    == *Advantages:*
 	- Good for functions with few parameters
 	- Good when sampling is cheap 
 	- Fast   
@@ -25,7 +25,7 @@ We chose to do this project because we appreciate the essentiality of the applic
     *Disadvantages:*
 	- Inefficient when the function has many parameters
 	- Inefficient when sampling is expensive
-	- Inefficent on multi-modal or noisy functions 
+	- Inefficent on multi-modal or noisy functions == 
 
 2. **Tree of Parzen Estimator (TPE):**
     This optimizer finds the probability that a sample is higher than a certain threshold, g(x) and another probability that a
