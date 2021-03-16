@@ -168,8 +168,8 @@ and with functions with high dimensions.
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
-	- Python 3.7
-	- Please see the file environmental.yml for the needed packages 
+    - Python 3.7
+    - Please see the file environmental.yml for the needed packages 
 
 
 ## How to Install:
@@ -228,4 +228,4 @@ This project follows the PEP8 style using the [**pylint**](https://www.pylint.or
 - Huat Chiang, PhD Chemical Engineering
 - Ahmed Eshaq, 
 - Elizabeth Harmon, MS Chemical Engineering
-- Salek Segid, 
+- Salek Segid, DSMS Chemical Engineering
