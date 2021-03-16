@@ -215,7 +215,7 @@ Black-Box-Optimization:
 
 Tests can be run using the [**nosetests**](https://nose.readthedocs.io/en/latest/) package:
 
-nosetests Black-Box-Optimization/tests/test.py
+    nosetests Black-Box-Optimization/tests/test.py
 
 ### Style Tests
 
