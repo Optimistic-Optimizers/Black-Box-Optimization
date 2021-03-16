@@ -213,6 +213,8 @@ Black-Box-Optimization:
                 |- Skopt_optimize.ipynb
                 |- __init__.py
             |- tests
+                |- test.py 
+                |- __init__.py
             |- Ensemble_Methods.ipynb
             |- SVM_methods.ipynb
             |- KNN_methods.ipynb    
