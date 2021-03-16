@@ -168,6 +168,7 @@ and with functions with high dimensions.
 ## Software Dependencies:
 
 The following software dependencies are associated with this package:
+
     - Python 3.7
     - Please see the file environmental.yml for the needed packages 
 
@@ -199,8 +200,8 @@ Black-Box-Optimization:
                 |- __init__.py
             |- tests
             |- Ensemble_Methods.ipynb
-	    |- SVM_methods.ipynb
-            |- KNN_methods.ipynb	    	    
+            |- SVM_methods.ipynb
+            |- KNN_methods.ipynb    
             |- __init__.py
             |- ensemble_methods.py
         |- docs
